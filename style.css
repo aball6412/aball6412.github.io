@@ -1,0 +1,58 @@
+body {
+
+}
+
+.container-fluid {
+    padding: 0;
+}
+
+
+/***HEADER SECTION***/
+.header {
+    border: solid;
+    height: 550px;
+    background: #1a222c;
+    color: #FFFFFF;
+}
+
+.nav_bar {
+    border: solid;
+    height: 100px;
+}
+
+.logo {
+
+    margin-top: 30px;
+    padding: 5px 0px 5px 10px;
+}
+
+.nav_links {
+
+    margin-top: 30px;
+    padding-left: 150px;
+}
+
+.nav_links li a {
+    color: #FFFFFF;
+}
+
+.nav_links li a:hover {
+    color: #d35fea;
+    background: #1a222c;
+}
+
+
+
+.about_me {
+    border: solid;
+}
+
+.footer {
+    border: solid;
+}
+
+
+
+
+
+
