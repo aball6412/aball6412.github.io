@@ -7,23 +7,23 @@ body {
 }
 
 
-/***HEADER SECTION***/
+/**************HEADER SECTION**************/
 .header {
-    border: solid;
+
     height: 550px;
     background: #1a222c;
     color: #FFFFFF;
 }
 
 .nav_bar {
-    border: solid;
+
     height: 100px;
 }
 
 .logo {
 
     margin-top: 30px;
-    padding: 5px 0px 5px 10px;
+    padding: 5px 0px 5px 25px;
 }
 
 .nav_links {
@@ -41,15 +41,55 @@ body {
     background: #1a222c;
 }
 
+.nav_links li a:visited {
+    background: #1a222c;
+}
+
+.header_content {
+
+    margin-top: 125px;
+}
 
 
+
+
+
+/**************ABOUT ME SECTION**************/
 .about_me {
+    height: 500px;
+    border: solid;
+    background-image: url("https://static.pexels.com/photos/9476/pexels-photo-large.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.about_me_content {
+
+    margin-top: 150px;
+}
+
+.about_me_side {
     border: solid;
 }
 
+
+
+
+/**************FOOTER SECTION**************/
 .footer {
+    height: 250px;
     border: solid;
 }
+
+
+
+
+
+
+
+
+
+
 
 
 
