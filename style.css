@@ -9,19 +9,20 @@ body {
 
 /**************HEADER SECTION**************/
 .header {
-
-    height: 550px;
+    /*height: 550px;*/
     background: #1a222c;
     color: #FFFFFF;
 }
 
 .nav_bar {
-
+    position: absolute;
+    top: 0px;
+    width: 100%;
     height: 100px;
 }
 
 .logo {
-
+    
     margin-top: 30px;
     padding: 5px 0px 5px 25px;
 }
@@ -46,8 +47,11 @@ body {
 }
 
 .header_content {
-
+    position: absolute;
+    top: 100px;
+    width: 100%;
     margin-top: 125px;
+
 }
 
 
@@ -73,6 +77,15 @@ body {
 }
 
 
+
+
+
+/**************PROJECTS SECTION**************/
+.projects {
+    border: solid;
+    height: 500px;
+
+}
 
 
 /**************FOOTER SECTION**************/
