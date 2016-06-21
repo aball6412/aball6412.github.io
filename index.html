@@ -30,6 +30,10 @@
         $(document).ready(function() {
             
             
+            
+            
+            ///////////////////////////////////////////  NAV BAR  ////////////////////////////////////////////////  
+            
             //NAV BAR STYLING CHANGE WHEN USER SCROLLS
             $(document).scroll(function() {
                 
@@ -91,6 +95,307 @@
             
             
             
+            
+            
+          ///////////////////////////////////////////  PROJECTS VIEWER  /////////////////////////////////////////////////////  
+            
+            //MAKE ALL OF MY PROJECTS INTO VARIABLES IN ORDER TO LOOP THROUGH THEM TO DISPLAY
+            var front_end = [
+                {
+                    url: "http://www.tic-tac-toe.com",
+                    img: "http://codemzy.github.io/img/projects/portfolio_fe_tictactoe.jpg",
+                    title: "TIC TAC TOE",
+                    preview: "A tic tac toe game built with JavaScript and jQuery, with only one rule... you will never beat the computer. Go on, give it a go, I dare you!",
+                    skills: ["HTML", "CSS", "Javascript", "Bootstrap", "jQuery"]
+                },
+                
+                {
+                    url: "http://www.calculator.com",
+                    img: "http://codemzy.github.io/img/projects/portfolio_fe_calculator.jpg",
+                    title: "JS CALCULATOR",
+                    preview: "Get your math on with this calculator fully coded in JavaScript ready to add, multiply, divide and subtract at your command.",
+                    skills: ["HTML", "CSS", "Javascript", "Bootstrap", "jQuery"]
+                },
+                
+                {
+                    url: "http://www.simon-game.com",
+                    img: "http://codemzy.github.io/img/projects/portfolio_fe_simongame.jpg",
+                    title: "SIMON GAME",
+                    preview: "Just copy the pattern displayed, and reach 20 to win. If you feel extra clever, pop this game in 'strict' mode and be careful not to make a wrong move.",
+                    skills: ["HTML", "CSS", "Javascript", "Bootstrap", "jQuery"]
+                }
+            ];
+            
+            
+            var back_end = [
+                {
+                    url: "http://www.short-url.com",
+                    img: "http://codemzy.github.io/img/projects/portfolio_be_shorturl.jpg",
+                    title: "SHORT URL",
+                    preview: "Got a long URL? Need to make it short? I went and built a microservice for that!",
+                    skills: ["Bootstrap", "Node.js", "Express.js", "MongoDB"]
+                },
+                
+                {
+                    url: "http://www.image-search.com",
+                    img: "http://codemzy.github.io/img/projects/portfolio_be_imgsearch.jpg",
+                    title: "IMAGE SEARCH",
+                    preview: "Need to search for an image and get the JSON data for that image? This microservice can do just that. Look at that JSON, isn't it pretty!",
+                    skills: ["Bootstrap", "Node.js", "Express.js", "Imgur API"]
+                },
+                
+                {
+                    url: "http://www.file-size.com",
+                    img: "http://codemzy.github.io/img/projects/portfolio_be_filesize.jpg",
+                    title: "FILE SIZE",
+                    preview: "How big is your file? This microservice will give you the low down.",
+                    skills: ["Bootstrap", "Node.js", "Express.js"]
+                }
+            ];
+            
+            
+            var full_stack = [
+                {
+                    url: "http://www.owl-be-there.com",
+                    img: "http://codemzy.github.io/img/projects/portfolio_fs_owlbethere.jpg",
+                    title: "OWL BE THERE",
+                    preview: "A nightlife coordination full stack app, log in with facebook or twitter and register your attendence at venues in any town or city.",
+                    skills: ["Bootstrap", "Node.js", "Express.js", "MongoDB", "Yelp API"]
+                },
+                
+                {
+                    url: "http://www.stock-rock.com",
+                    img: "http://codemzy.github.io/img/projects/portfolio_fs_stockrock.jpg",
+                    title: "STOCK ROCK",
+                    preview: "A stock charting app built with the MEAN stack. Updates in realtime using socket.io when you add or remove stocks.",
+                    skills: ["Bootstrap", "Node.js", "Express.js", "Chart.js"]
+                },
+                
+                {
+                    url: "http://www.vote-goat.com",
+                    img: "http://codemzy.github.io/img/projects/portfolio_fs_votegoat2.jpg",
+                    title: "VOTE GOAT",
+                    preview: "A voting app built with the MEAN stack. Vote on polls or add your own polls, just don't anger the goat.",
+                    skills: ["Bootstrap", "Node.js", "Express.js", "Chart.js"]
+                }
+            ];
+            
+            
+   
+            $(".full_stack").click(function() {
+                
+                //Clear out anything that might previously have been in target div
+                $(".target").html("");
+                
+                //Create variable to hold the html string
+                var project_str = "";
+                
+                //Loop through projects and add objects to the html string
+                for (var i in full_stack) {
+                    
+                    project_str += "<div class='project_img col-md-8'>" +
+
+                                "<div class='browser col-md-12'>" + 
+                                    "<div class='browser_buttons col-md-3''>" +
+                                        "<div class='circles'></div>" +
+                                        "<div class='circles'></div>" +
+                                        "<div class='circles'></div>" +
+                                    "</div>" +
+                                    "<div class='browser_url col-md-9'>" +
+                                        "<p>" + full_stack[i].url + "</p>" +
+                                    "</div>" +
+
+                                "</div> <!-- end browser -->" + 
+
+
+                               "<div class='browser_image col-md-12'>" + 
+                                    "<img src='" + full_stack[i].img + "' />" +
+
+                                "</div> <!-- end browser img -->" + 
+
+
+
+                            "</div> <!-- end project image -->" + 
+
+
+                            "<div class='project_desc col-md-4'>" +
+
+                                "<h1>" + full_stack[i].title + "</h1><br />" +
+                                "<p>" + full_stack[i].preview + "</p> <br />" +
+
+                                "<div class='project_link'>" +
+                                    "<button type='button' class='btn btn-primary'>VISIT</button>" +
+                                "</div> <br />" +
+
+                                "<div class='skills_used'>" + 
+                                    "<code>HTML, CSS, JAVASCRIPT</code>" +
+                                "</div>" + 
+
+                            "</div> <!-- end project description -->";
+     
+                } //End for loop
+                
+                
+                //Add the HTML to the target div
+                $(".target").html(project_str);
+                
+                //Make sure other link's borders are hidden
+                //Change current click's border to solid;
+                $(".front_end").css("border-bottom", "none");
+                $(".back_end").css("border-bottom", "none");
+                $(".full_stack").css("border-bottom", "solid");
+                
+                
+            }); //End Full Stack Click
+            
+            
+            
+            
+            
+            $(".front_end").click(function() {
+                
+                console.log("front end");
+                //Clear out anything that might previously have been in target div
+                $(".target").html("");
+                
+                //Create variable to hold the html string
+                var project_str = "";
+                
+                for (var i in front_end) {
+                    
+                    project_str += "<div class='project_img col-md-8'>" +
+
+                                "<div class='browser col-md-12'>" + 
+                                    "<div class='browser_buttons col-md-3''>" +
+                                        "<div class='circles'></div>" +
+                                        "<div class='circles'></div>" +
+                                        "<div class='circles'></div>" +
+                                    "</div>" +
+                                    "<div class='browser_url col-md-9'>" +
+                                        "<p>" + front_end[i].url + "</p>" +
+                                    "</div>" +
+
+                                "</div> <!-- end browser -->" + 
+
+
+                               "<div class='browser_image col-md-12'>" + 
+                                    "<img src='" + front_end[i].img + "' />" +
+
+                                "</div> <!-- end browser img -->" + 
+
+
+
+                            "</div> <!-- end project image -->" + 
+
+
+                            "<div class='project_desc col-md-4'>" +
+
+                                "<h1>" + front_end[i].title + "</h1><br />" +
+                                "<p>" + front_end[i].preview + "</p> <br />" +
+
+                                "<div class='project_link'>" +
+                                    "<button type='button' class='btn btn-primary'>VISIT</button>" +
+                                "</div> <br />" +
+
+                                "<div class='skills_used'>" + 
+                                    "<code>HTML, CSS, JAVASCRIPT</code>" +
+                                "</div>" + 
+
+                            "</div> <!-- end project description -->";
+           
+                    
+                } //End for loop
+                
+                
+                //Add the HTML to the target div
+                $(".target").html(project_str);
+                
+                //Make sure other link's borders are hidden
+                //Change current click's border to solid;
+                $(".front_end").css("border-bottom", "solid");
+                $(".back_end").css("border-bottom", "none");
+                $(".full_stack").css("border-bottom", "none");
+                
+                
+            }); //End Front End Click
+            
+            
+            
+            
+            
+            
+            
+            $(".back_end").click(function() {
+                
+                console.log("front end");
+                //Clear out anything that might previously have been in target div
+                $(".target").html("");
+                
+                //Create variable to hold the html string
+                var project_str = "";
+                
+                for (var i in back_end) {
+                    
+                    project_str += "<div class='project_img col-md-8'>" +
+
+                                "<div class='browser col-md-12'>" + 
+                                    "<div class='browser_buttons col-md-3''>" +
+                                        "<div class='circles'></div>" +
+                                        "<div class='circles'></div>" +
+                                        "<div class='circles'></div>" +
+                                    "</div>" +
+                                    "<div class='browser_url col-md-9'>" +
+                                        "<p>" + back_end[i].url + "</p>" +
+                                    "</div>" +
+
+                                "</div> <!-- end browser -->" + 
+
+
+                               "<div class='browser_image col-md-12'>" + 
+                                    "<img src='" + back_end[i].img + "' />" +
+
+                                "</div> <!-- end browser img -->" + 
+
+
+
+                            "</div> <!-- end project image -->" + 
+
+
+                            "<div class='project_desc col-md-4'>" +
+
+                                "<h1>" + back_end[i].title + "</h1><br />" +
+                                "<p>" + back_end[i].preview + "</p> <br />" +
+
+                                "<div class='project_link'>" +
+                                    "<button type='button' class='btn btn-primary'>VISIT</button>" +
+                                "</div> <br />" +
+
+                                "<div class='skills_used'>" + 
+                                    "<code>HTML, CSS, JAVASCRIPT</code>" +
+                                "</div>" + 
+
+                            "</div> <!-- end project description -->";
+                    
+                } //End for loop
+                
+                
+                //Add the HTML to the target div
+                $(".target").html(project_str);
+                
+                //Make sure other link's borders are hidden
+                //Change current click's border to solid;
+                $(".front_end").css("border-bottom", "none");
+                $(".back_end").css("border-bottom", "solid");
+                $(".full_stack").css("border-bottom", "none");
+                
+                
+            }); //End Back End Click
+            
+            
+            
+            //Trigger a click of the Full Stack link right away
+            //In order to make that the default section that user will see
+            $(".full_stack").trigger("click");
             
             
             
@@ -199,103 +504,32 @@
                 
                 <div class="project_display col-md-10 col-md-offset-1">
                     
-                    <div class="project_links col-md-4">
-                        <h4 class="text-center"><a href="#">Front-End</a></h4>
+                    <div class="project_links front_end col-md-4">
+                        <h4 class="text-center"><a>Front-End</a></h4>
                     </div>
                     
-                    <div class="project_links col-md-4">
-                        <h4 class="text-center"><a href="#">Back-End</a></h4>
+                    <div class="project_links back_end col-md-4">
+                        <h4 class="text-center"><a>Back-End</a></h4>
                     </div>
                     
-                    <div class="project_links col-md-4">
-                        <h4 class="text-center"><a href="#">Full Stack</a></h4>
+                    <div class="project_links full_stack col-md-4">
+                        <h4 class="text-center"><a>Full Stack</a></h4>
                     </div>
                 
                 
+                        
+                        
+                    
+                    <div class="target row">
                     
                     
-                    <div class="project_img col-md-8">
-                        
-                        <div class="browser col-md-12">
-                            <div class="browser_buttons col-md-3">
-                                <div class="circles"></div>
-                                <div class="circles"></div>
-                                <div class="circles"></div>
-                            </div>
-                            <div class="browser_url col-md-9">
-                                <p>http://www.aaronthompkins.com/</p>
-                            </div>
-                            
-                        </div> <!-- end browser -->
-                        
-                        
-                       <div class="browser_image col-md-12"> 
-                            <img src="http://codemzy.github.io/img/projects/portfolio_fe_tictactoe.jpg" />
-                           
-                        </div> <!-- end browser img -->
-                        
-                        
-                        
-                    </div> <!-- end project image -->
                     
+                    </div> 
                     
-                    <div class="project_desc col-md-4">
-                        <h1>TIC TAC TOE</h1><br />
-                        <p>A tic tac toe game built with JavaScript and jQuery, with only one rule... you will never beat the computer. Go on, give it a go, I dare you!</p> <br />
+                
                         
-                        <div class="project_link">
-                            <button type="button" class="btn btn-primary">VISIT</button>
-                        </div> <br />
                         
-                        <div class="skills_used">
-                            <code>HTML, CSS, JAVASCRIPT</code>
-                        </div> 
-                            
-                    </div> <!-- end project description -->
                     
-                    <!-------------------------------------CHANGE------>
-                    
-                    <div class="project_img col-md-8">
-                        
-                        <div class="browser col-md-12">
-                            <div class="browser_buttons col-md-3">
-                                <div class="circles"></div>
-                                <div class="circles"></div>
-                                <div class="circles"></div>
-                            </div>
-                            <div class="browser_url col-md-9">
-                                <p>http://www.aaronthompkins.com/</p>
-                            </div>
-                            
-                        </div> <!-- end browser -->
-                        
-                        
-                       <div class="browser_image col-md-12"> 
-                            <img src="http://codemzy.github.io/img/projects/portfolio_fs_owlbethere.jpg" />
-                           
-                        </div> <!-- end browser img -->
-                        
-                        
-                        
-                    </div> <!-- end project image -->
-                    
-                    
-                    <div class="project_desc col-md-4">
-                        <h1>OWL BE THERE</h1><br />
-                        <p>A tic tac toe game built with JavaScript and jQuery, with only one rule... you will never beat the computer. Go on, give it a go, I dare you!</p> <br />
-                        
-                        <div class="project_link">
-                            <button type="button" class="btn btn-primary">VISIT</button>
-                        </div> <br />
-                        
-                        <div class="skills_used">
-                            <code>HTML, CSS, JAVASCRIPT</code>
-                        </div> 
-                            
-                    </div> <!-- end project description -->
-                    
-                    
-                 <!-----------------------------------------------change -->   
                     
                 </div>  <!-- end project display -->
                 
