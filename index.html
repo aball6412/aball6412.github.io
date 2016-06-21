@@ -82,11 +82,11 @@
    
                     //Change links and link background back to original
                     $(".nav_links li a").css("color", "#FFFFFF");
-                    $(".nav_links li a").css("background", "#1a222c");
+                    $(".nav_links li a").css("background", "none");
                     
                     //Change the link hover back to it's default
                     $(".link").hover(function() {
-                       $(".nav_links li a").css("background", "#1a222c");
+                       $(".nav_links li a").css("background", "none");
                     });
                     
                 } //End else
@@ -102,81 +102,117 @@
             //MAKE ALL OF MY PROJECTS INTO VARIABLES IN ORDER TO LOOP THROUGH THEM TO DISPLAY
             var front_end = [
                 {
-                    url: "http://www.tic-tac-toe.com",
-                    img: "http://codemzy.github.io/img/projects/portfolio_fe_tictactoe.jpg",
-                    title: "TIC TAC TOE",
-                    preview: "A tic tac toe game built with JavaScript and jQuery, with only one rule... you will never beat the computer. Go on, give it a go, I dare you!",
-                    skills: ["HTML", "CSS", "Javascript", "Bootstrap", "jQuery"]
-                },
-                
-                {
-                    url: "http://www.calculator.com",
-                    img: "http://codemzy.github.io/img/projects/portfolio_fe_calculator.jpg",
-                    title: "JS CALCULATOR",
-                    preview: "Get your math on with this calculator fully coded in JavaScript ready to add, multiply, divide and subtract at your command.",
-                    skills: ["HTML", "CSS", "Javascript", "Bootstrap", "jQuery"]
-                },
-                
-                {
-                    url: "http://www.simon-game.com",
+                    url: "http://codepen.io/aball6412/full/pyqRjK/",
                     img: "http://codemzy.github.io/img/projects/portfolio_fe_simongame.jpg",
                     title: "SIMON GAME",
-                    preview: "Just copy the pattern displayed, and reach 20 to win. If you feel extra clever, pop this game in 'strict' mode and be careful not to make a wrong move.",
+                    preview: "Your goal is to remember twenty in a row. If you choose to accept this mission, visit the link below.",
                     skills: ["HTML", "CSS", "Javascript", "Bootstrap", "jQuery"]
+                },
+                {
+                    url: "http://codepen.io/aball6412/full/RaqMVV/",
+                    img: "http://codemzy.github.io/img/projects/portfolio_fe_tictactoe.jpg",
+                    title: "TIC TAC TOE",
+                    preview: "It's the ultimate game. A classic. Try your best to beat the computer, but I'm not betting on it!",
+                    skills: ["HTML", "CSS", "Javascript", "Bootstrap", "jQuery"]
+                },
+                {
+                    url: "https://codepen.io/aball6412/full/PNdYYW/",
+                    img: "http://codemzy.github.io/img/projects/portfolio_fe_calculator.jpg",
+                    title: "POMODORO CLOCK",
+                    preview: "The best way to be productive is to simply get started. So go. Get started. Use the Pomodoro Clock below!",
+                    skills: ["HTML", "CSS", "Javascript", "Bootstrap", "jQuery"]
+                },
+                {
+                    url: "http://codepen.io/aball6412/full/VaBVOV/",
+                    img: "http://codemzy.github.io/img/projects/portfolio_fe_calculator.jpg",
+                    title: "JAVASCRIPT CALCULATOR",
+                    preview: "Click below to do some quick math!",
+                    skills: ["HTML", "CSS", "Javascript", "Bootstrap", "jQuery"]
+                },
+                {
+                    url: "http://codepen.io/aball6412/full/PNQOep/",
+                    img: "http://codemzy.github.io/img/projects/portfolio_fe_quote.jpg",
+                    title: "RANDOM QUOTE MACHINE",
+                    preview: "Click a button, get a quote! There will never be a lack of inspiration generated from this page.",
+                    skills: ["HTML", "CSS", "Javascript", "Bootstrap", "jQuery", "Forismatic API"]
+                },
+                
+                {
+                    url: "http://codepen.io/aball6412/full/ZWxYzw/",
+                    img: "http://codemzy.github.io/img/projects/portfolio_fe_calculator.jpg",
+                    title: "LOCAL WEATHER",
+                    preview: "Will it rain? Is it blistering hot? Check the link below to find out!",
+                    skills: ["HTML", "CSS", "Javascript", "Bootstrap", "jQuery", "Open Weather Map API"]
+                },
+                
+                {
+                    url: "http://codepen.io/aball6412/full/YqaZjx/",
+                    img: "http://codemzy.github.io/img/projects/portfolio_fe_simongame.jpg",
+                    title: "WIKIPEDIA VIEWER",
+                    preview: "No need to go to Wikipedia.com. I connected to their API so you can search right here!",
+                    skills: ["HTML", "CSS", "Javascript", "Bootstrap", "jQuery", "Wikipedia API"]
+                },
+                
+                {
+                    url: "http://codepen.io/aball6412/full/vGjKKM/",
+                    img: "http://codemzy.github.io/img/projects/portfolio_fe_simongame.jpg",
+                    title: "TWITCH.TV",
+                    preview: "Who is currently streaming on Twitch.tv? Find out here.",
+                    skills: ["HTML", "CSS", "Javascript", "Bootstrap", "jQuery", "Twitch.tv API"]
                 }
             ];
             
             
             var back_end = [
                 {
-                    url: "http://www.short-url.com",
+                    url: "https://fcc-url-short-ms.herokuapp.com/",
                     img: "http://codemzy.github.io/img/projects/portfolio_be_shorturl.jpg",
                     title: "SHORT URL",
-                    preview: "Got a long URL? Need to make it short? I went and built a microservice for that!",
-                    skills: ["Bootstrap", "Node.js", "Express.js", "MongoDB"]
+                    preview: "I hate long URL's. That's why we've decided to make them short for you!",
+                    skills: ["Javascript", "Node.js", "Express.js", "MongoDB"]
                 },
                 
                 {
-                    url: "http://www.image-search.com",
+                    url: "https://img-search-abstract-layer.herokuapp.com/",
                     img: "http://codemzy.github.io/img/projects/portfolio_be_imgsearch.jpg",
                     title: "IMAGE SEARCH",
-                    preview: "Need to search for an image and get the JSON data for that image? This microservice can do just that. Look at that JSON, isn't it pretty!",
-                    skills: ["Bootstrap", "Node.js", "Express.js", "Imgur API"]
+                    preview: "Need to search for an image and get the JSON data for that image? This microservice can do just that. Beware, the JSON can look rough if you don't have a JSON viewer plugin installed.",
+                    skills: ["Javascript", "Node.js", "Express.js", "MongoDB", "Imgur API"]
                 },
                 
                 {
-                    url: "http://www.file-size.com",
+                    url: "https://file-metad-microservice.herokuapp.com/",
                     img: "http://codemzy.github.io/img/projects/portfolio_be_filesize.jpg",
                     title: "FILE SIZE",
                     preview: "How big is your file? This microservice will give you the low down.",
-                    skills: ["Bootstrap", "Node.js", "Express.js"]
+                    skills: ["Javascript", "Node.js", "Express.js"]
+                },
+                
+                {
+                    url: "https://quiet-lake-40342.herokuapp.com/",
+                    img: "http://codemzy.github.io/img/projects/portfolio_be_timestamp.jpg",
+                    title: "TIME STAMP",
+                    preview: "Easily convert unix timestamps to natural date format and vice versa.",
+                    skills: ["Javascript", "Node.js", "Express.js"]
                 }
             ];
             
             
             var full_stack = [
                 {
-                    url: "http://www.owl-be-there.com",
+                    url: "https://nightlife-coord-app.herokuapp.com/",
                     img: "http://codemzy.github.io/img/projects/portfolio_fs_owlbethere.jpg",
-                    title: "OWL BE THERE",
-                    preview: "A nightlife coordination full stack app, log in with facebook or twitter and register your attendence at venues in any town or city.",
-                    skills: ["Bootstrap", "Node.js", "Express.js", "MongoDB", "Yelp API"]
+                    title: "NIGHTLIFE COORDINATION",
+                    preview: "A nightlife coordination full stack app, log in with Twitter and register your attendence at venues in any town or city.",
+                    skills: ["Javascript", "Bootstrap", "Node.js", "Express.js", "MongoDB", "Yelp API"]
                 },
                 
                 {
-                    url: "http://www.stock-rock.com",
-                    img: "http://codemzy.github.io/img/projects/portfolio_fs_stockrock.jpg",
-                    title: "STOCK ROCK",
-                    preview: "A stock charting app built with the MEAN stack. Updates in realtime using socket.io when you add or remove stocks.",
-                    skills: ["Bootstrap", "Node.js", "Express.js", "Chart.js"]
-                },
-                
-                {
-                    url: "http://www.vote-goat.com",
+                    url: "https://vote-app.herokuapp.com/",
                     img: "http://codemzy.github.io/img/projects/portfolio_fs_votegoat2.jpg",
-                    title: "VOTE GOAT",
-                    preview: "A voting app built with the MEAN stack. Vote on polls or add your own polls, just don't anger the goat.",
-                    skills: ["Bootstrap", "Node.js", "Express.js", "Chart.js"]
+                    title: "VOTE APP",
+                    preview: "A voting app built with the MEAN stack. Vote on polls or add your own polls.",
+                    skills: ["Javascript", "Bootstrap", "Node.js", "Express.js", "MongoDB", "Chart.js"]
                 }
             ];
             
@@ -189,10 +225,29 @@
                 
                 //Create variable to hold the html string
                 var project_str = "";
+                var skills_str = "";
+                
                 
                 //Loop through projects and add objects to the html string
                 for (var i in full_stack) {
                     
+                    
+                    
+                    //Get coding skills and put in skills_str
+                    var skill_list = full_stack[i].skills;
+                    
+                    for (var j=0; j<= skill_list.length-1; j++) {
+                        
+                        if (j === (skill_list.length -1)) {
+                            skills_str += skill_list[j];
+                        }
+                        else {
+                            skills_str += skill_list[j] + ", ";
+                        }
+                    }
+                    
+                    
+
                     project_str += "<div class='project_img col-md-8'>" +
 
                                 "<div class='browser col-md-12'>" + 
@@ -224,14 +279,18 @@
                                 "<p>" + full_stack[i].preview + "</p> <br />" +
 
                                 "<div class='project_link'>" +
-                                    "<button type='button' class='btn btn-primary'>VISIT</button>" +
+                                    "<button onclick=window.open('" + full_stack[i].url + "') type='button' class='btn btn-primary'>VISIT</button>" +
                                 "</div> <br />" +
 
                                 "<div class='skills_used'>" + 
-                                    "<code>HTML, CSS, JAVASCRIPT</code>" +
+                                    "<code>" + skills_str + "</code>" +
                                 "</div>" + 
 
                             "</div> <!-- end project description -->";
+                    
+                    
+                        //Clear skills_str for next project
+                        skills_str = "";
      
                 } //End for loop
                 
@@ -245,6 +304,8 @@
                 $(".back_end").css("border-bottom", "none");
                 $(".full_stack").css("border-bottom", "solid");
                 
+                //$(".full_stack").animate({ borderBottom: "solid" }, 1000);
+                
                 
             }); //End Full Stack Click
             
@@ -254,15 +315,31 @@
             
             $(".front_end").click(function() {
                 
-                console.log("front end");
                 //Clear out anything that might previously have been in target div
                 $(".target").html("");
                 
                 //Create variable to hold the html string
                 var project_str = "";
+                var skills_str = "";
                 
                 for (var i in front_end) {
                     
+                    
+                    //Get coding skills and put in skills_str
+                    var skill_list = front_end[i].skills;
+                    
+                    for (var j=0; j<= skill_list.length-1; j++) {
+                        
+                        if (j === (skill_list.length -1)) {
+                            skills_str += skill_list[j];
+                        }
+                        else {
+                            skills_str += skill_list[j] + ", ";
+                        }
+                    }
+                    
+                    
+ 
                     project_str += "<div class='project_img col-md-8'>" +
 
                                 "<div class='browser col-md-12'>" + 
@@ -294,15 +371,18 @@
                                 "<p>" + front_end[i].preview + "</p> <br />" +
 
                                 "<div class='project_link'>" +
-                                    "<button type='button' class='btn btn-primary'>VISIT</button>" +
+                                    "<button onclick=window.open('" + front_end[i].url + "') type='button' class='btn btn-primary'>VISIT</button>" +
                                 "</div> <br />" +
 
                                 "<div class='skills_used'>" + 
-                                    "<code>HTML, CSS, JAVASCRIPT</code>" +
+                                    "<code>" + skills_str + "</code>" +
                                 "</div>" + 
 
                             "</div> <!-- end project description -->";
            
+                    
+                    //Clear skills_str for next project
+                    skills_str = "";
                     
                 } //End for loop
                 
@@ -327,15 +407,30 @@
             
             $(".back_end").click(function() {
                 
-                console.log("front end");
                 //Clear out anything that might previously have been in target div
                 $(".target").html("");
                 
                 //Create variable to hold the html string
                 var project_str = "";
+                var skills_str = "";
                 
                 for (var i in back_end) {
                     
+                    
+                    //Get coding skills and put in skills_str
+                    var skill_list = back_end[i].skills;
+                    
+                    for (var j=0; j<= skill_list.length-1; j++) {
+                        
+                        if (j === (skill_list.length -1)) {
+                            skills_str += skill_list[j];
+                        }
+                        else {
+                            skills_str += skill_list[j] + ", ";
+                        }
+                    }
+                    
+
                     project_str += "<div class='project_img col-md-8'>" +
 
                                 "<div class='browser col-md-12'>" + 
@@ -367,14 +462,18 @@
                                 "<p>" + back_end[i].preview + "</p> <br />" +
 
                                 "<div class='project_link'>" +
-                                    "<button type='button' class='btn btn-primary'>VISIT</button>" +
+                                    "<button onclick=window.open('" + back_end[i].url + "') type='button' class='btn btn-primary'>VISIT</button>" +
                                 "</div> <br />" +
 
                                 "<div class='skills_used'>" + 
-                                    "<code>HTML, CSS, JAVASCRIPT</code>" +
+                                    "<code>" + skills_str + "</code>" +
                                 "</div>" + 
 
                             "</div> <!-- end project description -->";
+                    
+                    
+                    //Clear skills_str for next project
+                    skills_str = "";
                     
                 } //End for loop
                 
@@ -562,19 +661,17 @@
                 <div class="social_icons col-md-2 col-md-offset-5">
 
                     <div class="linkedin icon col-md-6">
-                        <a href="#"><i class="fa fa-linkedin"></i></a>
+                        <a href="https://www.linkedin.com/in/aaron-thompkins-44137a37" target="_blank"><i class="fa fa-linkedin"></i></a>
                     </div>
 
 
                     <div class="github icon col-md-6">
-                        <a href="#"><i class="fa fa-github"></i></a>
+                        <a href="https://github.com/aball6412/" target="_blank"><i class="fa fa-github"></i></a>
                     </div>
 
                 </div> <!-- end social icons -->
                     
                     
-                    
-
                 
             </div> <!-- end footer -->
         
