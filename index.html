@@ -26,6 +26,90 @@
         <link href="style.css" type="text/css" rel="stylesheet" />
     
         
+        <script>
+        $(document).ready(function() {
+            
+            
+            //NAV BAR STYLING CHANGE WHEN USER SCROLLS
+            $(document).scroll(function() {
+                
+                //Get number of pixels we scroll away from the top of screen
+                var scroll = $(document).scrollTop();
+                
+                //If we are further then 30 pixels then...
+                if (scroll >= 30) {
+                    
+                              
+                    //Change the main nav bar css
+                    $(".nav_bar").css(
+                        {
+                            "background": "#FFFFFF",
+                            "color": "#8d8d8d",
+                            "border-bottom": "solid",
+                            "border-width": "1px",
+                            "border-color": "#e3e3e3",
+                            "box-shadow": "0px 1px 5px #e3e3e3"
+                        });
+                    
+                    //Change the individual links in nav bar
+                    $(".nav_links li a").css("color", "#8d8d8d");
+                    $(".nav_links li a").css("background", "#FFFFFF");
+   
+                    
+                    
+                    //Change default hover that we have in our original CSS
+                    $(".link").hover(function() { 
+                       $(".nav_links li a").css("background", "#FFFFFF");
+                    });
+                    
+                    
+                }
+                
+                else {
+                    
+                    //Change the main nav bar css back to original
+                    $(".nav_bar").css(
+                        {
+                            "background": "none",
+                            "color": "#FFFFFF",
+                            "border": "hidden",
+                            "box-shadow": "none"
+                        });
+   
+                    //Change links and link background back to original
+                    $(".nav_links li a").css("color", "#FFFFFF");
+                    $(".nav_links li a").css("background", "#1a222c");
+                    
+                    //Change the link hover back to it's default
+                    $(".link").hover(function() {
+                       $(".nav_links li a").css("background", "#1a222c");
+                    });
+                    
+                } //End else
+                
+            }); //END NAV STYLING FOR SCROLLING 
+            
+            
+            
+            
+            
+            
+            
+        }); //End whole document
+        
+        
+        
+        
+        
+        
+        
+        </script>
+        
+        
+        
+        
+        
+        
     </head>
     
     <body>
@@ -54,10 +138,10 @@
                     
                     <div class="col-md-6 nav_links">
                         <ul class="nav nav-pills">
-                            <li role="presentation"><a href="#">Home</a></li>
-                            <li role="presentation"><a href="#">Projects</a></li>
-                            <li role="presentation"><a href="#">About Me</a></li>
-                            <li role="presentation"><a href="#">Contact</a></li>
+                            <li class="link" role="presentation"><a href="#">Home</a></li>
+                            <li class="link" role="presentation"><a href="#">Projects</a></li>
+                            <li class="link" role="presentation"><a href="#">About Me</a></li>
+                            <li class="link" role="presentation"><a href="#">Contact</a></li>
                         </ul>
                     </div>
                     
@@ -70,6 +154,8 @@
                 </div>
                 
             </div> <!-- end header -->
+
+            
 
             
             

@@ -19,6 +19,7 @@ body {
     top: 0px;
     width: 100%;
     height: 100px;
+    z-index: 999;
 }
 
 .logo {
@@ -38,7 +39,7 @@ body {
 }
 
 .nav_links li a:hover {
-    color: #d35fea;
+    color: #d35fea !important;
     background: #1a222c;
 }
 
@@ -61,7 +62,6 @@ body {
 /**************ABOUT ME SECTION**************/
 .about_me {
     height: 500px;
-    border: solid;
     background-image: url("https://static.pexels.com/photos/9476/pexels-photo-large.jpeg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -73,7 +73,7 @@ body {
 }
 
 .about_me_side {
-    border: solid;
+
 }
 
 
