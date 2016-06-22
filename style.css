@@ -1,5 +1,5 @@
 body {
-
+    font-family: 'Open Sans', sans-serif;
 }
 
 .container-fluid {
@@ -15,6 +15,8 @@ body {
 }
 
 .nav_bar {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
     position: fixed;
     top: 0px;
     width: 100%;
@@ -57,6 +59,14 @@ body {
 
 }
 
+.header_content h1 {
+    font-size: 44px;
+}
+
+.header_content h3 {
+    font-size: 22px;
+}
+
 
 
 
@@ -69,9 +79,14 @@ body {
     background-size: cover;
 }
 
+
 .about_me_content {
 
     margin-top: 150px;
+}
+
+.about_me_content h2 {
+    font-size: 34px;
 }
 
 .about_me_side {
@@ -90,16 +105,23 @@ body {
     padding: 20px;
 }
 
+.projects h3 {
+    color: #455a64;
+}
+
 .project_display {
 
 }
 
 
 .project_links {
-
+    color: #d35fea;
     margin-bottom: 25px;
 }
 
+.project_links h4 {
+    color: #455a64;
+}
 
 
 .project_img {
@@ -184,62 +206,100 @@ body {
 
 /**************FOOTER SECTION**************/
 .footer {
-    height: 250px;
+    height: 275px;
     border-top: solid;
-    border-width: 1px;
-    border-color: #ddd;
-    background: #f9f9f9;
+    border-width: 10px;
+    border-color: #2d404c;
+/*    background: #f9f9f9;*/
+    background: #374d5c;
+    color: #FFFFFF;
+/*    color: #FFFFFF;*/
 }
+
+.footer a {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    color: #d35fea;
+}
+
+.footer_left {
+
+    padding: 0;
+
+}
+
+
+
+.left_email, .left_linkedin, .left_github {
+
+    padding-top: 12px;
+    height: 60px;
+}
+
+
+.info {
+
+    height: 60px;
+    padding-top: 10px;
+}
+
+
+
+
+.left_email span {
+    font-size: 35px;
+}
+
+.left_linkedin i {
+    font-size: 35px;
+}
+
+.left_github i {
+    font-size: 35px;
+}
+
+
+
+.footer_right {
+
+    padding: 0px;
+    margin-top: 30px;
+}
+
+.right_map {
+
+    height: 60px;
+    padding-top: 12px;
+ 
+}
+.right_map i {
+    font-size: 35px;
+}
+
+.right_address {
+
+
+}
+
+
 
 
 .footer_title {
 
 }
 
-.footer_title span {
-    font-size: 35px;
-}
 
-.social_icons {
+/**************BOTTOM FOOTER**************/
 
-    padding: 0;
-}
-
-.icon {
-
-    margin: 20px;
-    border-radius: 3px;
-    padding: 7px 0 0 9px;
-    height: 50px;
-    width: 50px;
-}
-
-.github {
-    background: #444444;
-}
-
-.fa-github {
+.bottom_footer {
+    background: #2d404c;
     color: #FFFFFF;
-
+    height: 100px;
+    padding: 25px;
 }
-
-.linkedin {
-    background: #007BB6;
-}
-.fa-linkedin {
-    color: #FFFFFF;
-}
-
-.icon i {
-    font-size: 35px;
-}
-
-
-
-
-
-
-
 
 
 
