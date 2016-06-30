@@ -82,7 +82,7 @@ body {
 
 .about_me_content {
 
-    margin-top: 150px;
+    margin-top: 50px;
 }
 
 .about_me_content h2 {
@@ -206,7 +206,7 @@ body {
 
 /**************FOOTER SECTION**************/
 .footer {
-    height: 275px;
+
     border-top: solid;
     border-width: 10px;
     border-color: #2d404c;
