@@ -9,11 +9,13 @@ Currently, I am working through a number of courses to continue to expand upon m
 # Skills Represented in Portfolio
 
 + Javascript
++ PHP
 + JQuery
 + React.js
 + Node.js
 + Express
 + MongoDB
++ MySQL
 + Bootstrap
 + CSS
 + HTML
