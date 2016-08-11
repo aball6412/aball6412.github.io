@@ -10,12 +10,15 @@ Currently, I am working through a number of courses to continue to expand upon m
 
 + Javascript
 + PHP
++ C#
 + JQuery
 + React.js
 + Node.js
++ ASP.NET MVC
 + Express
 + MongoDB
 + MySQL
++ SQL Server
 + Bootstrap
 + CSS
 + HTML
