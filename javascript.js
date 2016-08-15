@@ -1,6 +1,7 @@
 $(document).ready(function() {
             
-      
+
+    
     ///////////////////////////////////////////  NAV BAR  ////////////////////////////////////////////////  
 
     //NAV BAR STYLING CHANGE WHEN USER SCROLLS
@@ -71,6 +72,13 @@ $(document).ready(function() {
 
     //MAKE ALL OF MY PROJECTS INTO VARIABLES IN ORDER TO LOOP THROUGH THEM TO DISPLAY
     var front_end = [
+        {
+            url: "http://codepen.io/aball6412/full/oLmOQJ/",
+            img: "/images/dungeon_crawler.png",
+            title: "ROGUELIKE DUNGEON CRAWLER GAME",
+            preview: "Just as it sounds. Play a classic Roguelike Dungeon Crawler game by clicking below!!",
+            skills: ["Javascript", "React.js", "Bootstrap", "HTML", "SASS"]
+        },
         {
             url: "http://codepen.io/aball6412/full/YWdQAL/",
             img: "/images/game_of_life.png",
