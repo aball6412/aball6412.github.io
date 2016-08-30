@@ -207,6 +207,13 @@ $(document).ready(function() {
 
         },
         {
+            url: "https://fcc-chart-stocks.herokuapp.com/",
+            img: "/images/chart_stock_market.png",
+            title: "CHART THE STOCK MARKET",
+            preview: "Add stocks and see them charted through. Also, get real time updates when other viewers add or remove stocks!",
+            skills: ["Node.js", "Express.js", "Socket.io", "Javascript", "jQuery", "Bootstrap", "Quandl API" ]
+        },
+        {
             url: "https://nightlife-coord-app.herokuapp.com/",
             img: "/images/nightlife_app.png",
             title: "NIGHTLIFE COORDINATION",
